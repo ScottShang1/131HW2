@@ -1,5 +1,5 @@
 ---
-title: "131 Homework1"
+title: "131 Homework2"
 author: "Scott Shang (8458655)"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output:
@@ -9,7 +9,7 @@ output:
 ---
 
 ---
-title: "131 Homework1"
+title: "131 Homework2"
 author: "Scott Shang (8458655)"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output: pdf_document
@@ -96,4 +96,4 @@ ab_pred
 
 ab_metric(ab_pred,truth=age,estimate=.pred)
 ```
-
+The R-squared value we got is 0.55. It's a measure of how much variation of the response variable is explained by the predictors. In this case, we found that our model is not that good. 
