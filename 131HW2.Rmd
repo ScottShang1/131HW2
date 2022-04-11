@@ -32,6 +32,8 @@ indent3 = '            '
 
 Question1
 ```{r}
+library("tidyverse")
+library("tidymodels")
 abalone=read_csv('abalone.csv')
 head(abalone)
 abalone$age=abalone$rings+1.5
