@@ -87,11 +87,11 @@ predict(lm_fit,new_data=ab_test)
 
 Question7
 ```{r}
-lm_fit %>% 
-  # This returns the parsnip object:
-  extract_fit_parsnip() %>% 
-  # Now tidy the linear model object:
-  tidy()
+ab_metric=metric_set(rsq,rmse,mae)
+ab_pred=predict(lm_fit,new_data=ab_train%>%select(-age))
+ab_pred=bind_cols(ab_pred,ab_train%>%select(age))
+ab_pred
 
+ab_metric(ab_pred,truth=age,estimate=.pred)
 ```
 
